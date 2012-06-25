@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link href="/media/favicon.ico" rel="icon" type="image/x-icon"> 
+	<style>
+            span{
+                margin-left:20px;
+	    }
+	</style>
+    </head>
+    <body>
+        <h1>{{log.flight_date}} </h1>
+        {% if log.make_and_model %} <label for="makeandmodel">Make and Model</label><span id="makeandmodel">{{log.make_and_model}}</span> <br> {% endif %}
+        {% if log.ident %} <label for="ident">Ident</label><span id="ident">{{log.ident}}</span> <br> {% endif %}
+        {% if log.airport_from %} <label for="af">Airport From</label><span id="af">{{log.airport_from}}</span> <br> {% endif %}
+        {% if log.airport_to %} <label for="at">Airport To</label><span id="at">{{log.airport_to}}</span> <br> {% endif %}
+        {% if log.number_instructor_app %} <label for="nia">Number of Instructor App.</label><span id="nia">{{log.number_instructor_app}}</span> <br> {% endif %}
+        {% if log.number_landings %} <label for="nl">Number Landings</label><span id="nl">{{log.number_landings}}</span> <br> {% endif %}
+        {% if log.airplane_sel %} <label for="sel">Airport SEL</label><span id="sel">{{log.airplane_sel}}</span> <br> {% endif %}
+        {% if log.airplane_mel %} <label for="mel">Airport MEL</label><span id="mel">{{log.airplane_mel}}</span> <br> {% endif %}
+        {% if log.cross_country %} <label for="cc">Cross Country</label><span id="cc">{{log.cross_country}}</span> <br> {% endif %}
+        {% if log.day_time %} <label for="dt">Day Time</label><span id="dt">{{log.day_time}}</span> <br> {% endif %}
+        {% if log.night_time %} <label for="nt">Night Time</label><span id="nt">{{log.night_time}}</span> <br> {% endif %}
+        {% if log.actual_instrument %} <label for="ai">Actual Instrument</label><span id="ai">{{log.actual_instrument}}</span> <br> {% endif %}
+        {% if log.simulated_instrument %} <label for="si">Simulated Instrument</label><span id="si">{{log.simulated_instrument}}</span> <br> {% endif %}
+        {% if log.ground_trainer %} <label for="gt">Ground Trainer</label><span id="gt">{{log.ground_trainer}}</span> <br> {% endif %}
+        {% if log.dual_received %} <label for="dr">Dual Received</label><span id="dr">{{log.dual_received}}</span> <br> {% endif %}
+        {% if log.pilot_in_command %} <label for="pic">Pilot in Command</label><span id="pic">{{log.pilot_in_command}}</span> <br> {% endif %}
+        {% if log.total_duration_of_flight %} <label for="total">Duration of Flight</label><span id="total">{{log.total_duration_of_flight}}</span>  	{%endif%}
+
+        <br>
+        <br>
+        <br>
+        <label for="remarks"></label><span id="remarks">{{log.remarks}}</span>  	
+
+
+    </body>
+</html>

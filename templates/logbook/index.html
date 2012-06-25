@@ -1,0 +1,39 @@
+<html>
+    <head>
+       <link href="/media/favicon.ico" rel="icon" type="image/x-icon"> 
+    </head>
+    <body>
+        <table border=1>
+            <tr>
+	        <td>Date</td>
+	        <td>Tail Number</td>
+	        <td>Airport from</td>
+	        <td>Airport to</td>
+	        <td>Number of landings</td>
+	        <td>Duration of Flight</td>
+	        <td>Info</td>
+	    </tr>
+        {% for l in logs%}
+            <tr>
+	        <td>{{l.flight_date}}</td>
+	        <td>{{l.plane.ident}}</td>
+	        <td>{{l.airport_from}}</td>
+	        <td>{{l.airport_to}}</td>
+	        <td>{{l.number_landings}}</td>
+	        <td>{{l.total_duration_of_flight}}</td>
+                <td><a href="flight/{{l.id}}/">Info</a></td>
+	    </tr>
+	{% endfor %}
+<tr>
+	        <td></td>
+	        <td></td>
+	        <td></td>
+	        <td></td>
+	        <td>{{total_landings}}</td>
+	        <td>{{total_time}}</td>
+	        <td></td>
+	    </tr>
+        </table>
+
+    </body>
+    </html>
